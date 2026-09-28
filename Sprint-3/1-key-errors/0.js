@@ -26,7 +26,6 @@
 // We cannot have two declarations of the same variable so we remove the let inside .capitalise.
 // =============> write your new code here
 function capitalise(str) {
-  str = `${str[0].toUpperCase()}${str.slice(1)}`;
-  return str;
+  return `${str[0].toUpperCase()}${str.slice(1)}`;
 }
 console.log(capitalise("frankocean"))

@@ -28,30 +28,27 @@
 // my code:
 function formatAs12HourClock(time) {
   const hours = Number(time.slice(0, 2));
-  const minutes = time.slice(-2)
+  const minutes = time.slice(-2);
+  let hours12;
+  let timePeriod;
 
   if (hours === 0) {
-    return `12:${minutes} am`
+    hours12 = "12";
+    timePeriod = "am";
   }
   else if (hours === 12) {
-    return `12:${minutes} pm`
+    hours12 = "12";
+    timePeriod = "pm";
+  }
+  else if (hours < 12) {
+    timePeriod = "am";
+    hours12 = String(hours).padStart(2, "0");
   }
   else if (hours > 12) {
-    let newhours = hours - 12
-    if (newhours < 10) {
-      return `${String(newhours).padStart(2, "0")}:${minutes} pm`
-    }
-    else {
-      return `${hours - 12}:${minutes} pm`;
-    }
+    hours12 = String(hours - 12).padStart(2, "0");
+    timePeriod = "pm";
   }
-  else if (hours < 10) {
-    return `${String(hours).padStart(2, "0")}:${minutes} am`
-  }
-  else {
-    return `${hours}:${minutes} am`;
-  }
-
+  return `${hours12}:${minutes} ${timePeriod}`
 }
 
 const cases = [

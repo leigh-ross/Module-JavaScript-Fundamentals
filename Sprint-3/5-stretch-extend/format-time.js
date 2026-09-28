@@ -28,10 +28,31 @@
 // my code:
 function formatAs12HourClock(time) {
   const hours = Number(time.slice(0, 2));
-  if (hours >= 12) {
-    return `${hours - 12}:${time.slice(3)} pm`;
+  const minutes = time.slice(-2)
+  console.log(hours)
+
+  if (hours === 0) {
+    return `12:${minutes} am`
   }
-  return `${time}:${time.slice(3)} am`;
+  else if (hours === 12) {
+    return `12:${minutes} pm`
+  }
+  else if (hours > 12) {
+    let newhours = hours - 12
+    if (newhours < 10) {
+      return `${String(newhours).padStart(2, "0")}:${minutes} pm`
+    }
+    else {
+      return `${hours - 12}:${minutes} pm`;
+    }
+  }
+  else if (hours < 10) {
+    return `${String(hours).padStart(2, "0")}:${minutes} am`
+  }
+  else {
+    return `${hours}:${minutes} am`;
+  }
+
 }
 
 const cases = [

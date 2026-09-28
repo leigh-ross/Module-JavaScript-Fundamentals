@@ -13,7 +13,7 @@ function toPounds(str) {
 
     let pence = paddedPenceNumberString.substring(paddedPenceNumberString.length - 2).padEnd(2, "0");
 
-    console.log(`£${pounds}.${pence}`);
+    return `£${pounds}.${pence}`;
 }
 
-toPounds("5045p")
+console.log(toPounds("5045p"))

@@ -15,9 +15,9 @@
 // Use the MDN string documentation to help you find a solution
 // This might help https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 
-function UPPER_SNAKE_CASE(str) {
-    let snake_case = str.replaceAll(" ", "_");
-    return snake_case.toUpperCase()
+function convertToUpperSnakeCase(str) {
+    let snakeCase = str.replaceAll(" ", "_");
+    return snakeCase.toUpperCase()
 }
 
-console.log(UPPER_SNAKE_CASE("have you ever had a krispy kreme"))
+console.log(convertToUpperSnakeCase("have you ever had a krispy kreme"))

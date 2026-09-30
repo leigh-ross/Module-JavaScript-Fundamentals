@@ -16,15 +16,16 @@ Now try invoking the function `prompt` with a string input of `"What is your nam
 What effect does calling the `prompt` function have?
 What is the return value of `prompt`?
 
-// Opens a popup box with a text input. The value inside the () is what would display above the input. 
-// The return value is myname? 
+// Opens a popup box with a text input. The value inside the () is what would display above the input.
+// The return value is myname in this case.
+// In general, prompt will store a string containing whatever the user typed or null if they clicked cancel.
 
 This is the code I did.
 alert("Hello world")
 undefined
 prompt("What is your name")
 'Tylerluvslasagne'
-let myname = prompt("what is yur name")
+let myname = prompt("what is your name")
 undefined
 console.log(myname)
 VM319:1 I LOVE MY EX

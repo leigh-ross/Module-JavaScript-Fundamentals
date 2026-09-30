@@ -15,7 +15,7 @@ console.log(`The percentage change is ${percentageChange}`);
 // Number() line 4,5. .replaceAll() line 4,5. console.log() line 10.
 
 // b) Run the code and identify the line where the error is coming from - why is this error occurring? How can you fix this problem?
-// line 5: put a comma between the find and replace
+// line 5: put a comma between the two arguments representing find and replace.
 
 // c) Identify all the lines that are variable reassignment statements
 // line 4, 5.
